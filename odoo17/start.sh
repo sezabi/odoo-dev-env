@@ -1,0 +1,1 @@
+python /opt/odoo17/odoo/odoo-bin -s -c /opt/odoo17/o17.config
