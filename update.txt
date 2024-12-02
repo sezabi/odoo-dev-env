@@ -1,0 +1,2 @@
+https://medium.com/@karan.bk/upgrade-odoo-database-with-openupgrade-a951dfdf13cf
+https://github.com/OCA/OpenUpgrade/tree/17.0
