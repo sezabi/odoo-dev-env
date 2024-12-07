@@ -3,12 +3,12 @@ sudo apt install make build-essential libssl-dev python3-dev libxml2-dev libxslt
 sudo apt install make -y
 sudo apt install gcc -y
 sudo apt install git -y
-sudo mkdir -p /opt/odoo18
-sudo chown -R $USER /opt/odoo18/
-git clone https://github.com/odoo/odoo -b 18.0 --depth=1 /opt/odoo18/odoo
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 cd ~/.pyenv && src/configure && make -C src
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-echo 'reboot server'
+exec "$SHELL"
+git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+exec "$SHELL"
